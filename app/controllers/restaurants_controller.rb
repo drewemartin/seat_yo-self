@@ -15,9 +15,9 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
 
-    if current_user
-      @reservation = @restaurant.reservations.build
-    end
+    # if current_user
+    #   @reservation = @restaurant.reservations.build
+    # end
   end
 
   def edit
@@ -40,7 +40,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to restaurants_path, :notice => "ThanK you for adding a new restaurant"
+      redirect_to restaurants_path, :notice => "Thank you for adding a new restaurant"
     else
       render 'new'
     end

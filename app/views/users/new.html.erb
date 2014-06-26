@@ -1,2 +1,40 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Create New User</h1>
+
+<%= form_for @user do |u| %>
+  <% if @user.errors.any? %>
+    <div>
+      <p>Form is invalid</p>
+    </div>
+    <div>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end%>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= u.label :first_name %><br>
+    <%= u.text_field :first_name %>
+  </div>
+  <div>
+    <%= u.label :last_name %><br>
+    <%= u.text_field :last_name %>
+  </div>
+  <div>
+    <%= u.label :email %><br>
+    <%= u.text_field :email %>
+  </div>
+  <div>
+    <%= u.label :password %><br>
+    <%= u.text_field :password %>
+  </div>
+  <div>
+    <%= u.label :password_confirmation %><br>
+    <%= u.text_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= u.submit %>
+  </div>
+<% end %>
