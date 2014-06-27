@@ -6,17 +6,26 @@
 <p><%= link_to "Edit #{@restaurant.name}", edit_restaurant_path(@restaurant.id) %></p>
 <p><%= link_to "Back to Restaurants", restaurants_path %></p>
 
----*** Everything below this line is throwing errors ***---
 <% if current_user %>
 
-  <h3>Reservations for <%= @restaurant.name %></h3>
-
-  <% @restaurant.reservations.each do |reservation| %>
-  <p>Reservation date: <%= reservation.reservation_date %>
-    <br/>
-    <% if reservation.user != nil %>
-      <em> by <%= reservation.user.email %></em>
-      Created on: <%= reservation.created_at %>
+  <h4>New Reservation</h4>
+  <%= form_for([@restaurant, @reservation]) do |f| %>
+    <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+      <ul>
+      <% @reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      </ul>
+    <% end %>
   <% end %>
 
+  <div class="field">
+    <%= f.label :party_size %><br />
+    <%= f.number_field :party_size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 <% end %>
