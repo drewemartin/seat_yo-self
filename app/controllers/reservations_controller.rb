@@ -49,7 +49,7 @@ class ReservationsController < ApplicationController
 
   private
   def reservation_params
-    params.require(:reservation).permit(:restaurant_id, :party_size)
+    params.require(:reservation).permit(:restaurant_id, :party_size, :reservation_date)
   end
 
   def load_restaurant
