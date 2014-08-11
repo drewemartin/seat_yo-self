@@ -1,20 +1,20 @@
-#Welcome to Seat Yo-Self
+Welcome to Seat Yo-Self
 
 This is a project modelled off the popular site Open Table. 
 Users can add new restaurants, and set and view reservations. 
 
 
-###Functionality Highlights
+Functionality Highlights
 
 * Utilizes nested resources 
 
 * Single user model for both creating reservations and restaurants
 
-###Specs
+Specs
 
 * Made with Ruby on Rails(infrastructure) 
 
-###Collaborators
+Collaborators
 
 * Drew Martin (Drew.E.Martin@gmail.com)
 
