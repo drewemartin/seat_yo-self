@@ -1,28 +1,23 @@
-== README
+#Welcome to Seat Yo-Self
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a project modelled off the popular site Open Table. 
+Users can add new restaurants, and set and view reservations. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+###Functionality Highlights
+
+* Utilizes nested resources 
+
+* Single user model for both creating reservations and restaurants
+
+###Specs
+
+* Made with Ruby on Rails(infrastructure) 
+
+###Collaborators
+
+* Drew Martin (Drew.E.Martin@gmail.com)
+
+* Alessia Bellisario (bellisario.alessia@gmail.com)
+
+
